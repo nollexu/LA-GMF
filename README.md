@@ -17,8 +17,10 @@ PyTorch implementation of "Interpretable Medical Deep Framework by Logits-constr
 * numpy 1.25.2
 * Python 3.9.17
 * pandas 2.0.3
-* scikit-learn 1.3.0   
+* scikit-learn 1.3.0
 ## Usage
+
+🐣For the hyperparameter λ(τ), we recommend delaying its assignment when using a smaller training set, and advancing its assignment when using a larger training set. For example, when only using ADNI1 for training, you can set λ=0(τ≤30)/λ=0.2(τ>30). When using ADNI1+ADNI2+ADNI3 for training, you can set λ=0(τ≤10)/λ=0.2(τ>10).
 
 ```plain
 python main.py --device [GPU-id]
